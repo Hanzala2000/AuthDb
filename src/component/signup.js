@@ -5,7 +5,6 @@ const [data,setData] = useState({
   email:"",
   password:""
 })
-
 let set = (e,prop) =>{
   setData({...data,[prop]:e})
 }
@@ -13,11 +12,13 @@ let next = () =>{
   auth.createUserWithEmailAndPassword(data.email,data.password)
   .then((success)=>{
     console.log(success)
+
+  db.ref('/').child("Users").push({email:data.email,password:data.password})
   })
   .catch((error)=>{
     console.log(error)
   })
-  db.ref('/').child("Users").push({email:data.email,password:data.password})
+  setData({email:"",password:""})
 }
   return (
     <div>
