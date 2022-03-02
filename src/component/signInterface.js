@@ -1,4 +1,4 @@
-// export default function SignUser () {
-//   return <h1>SignUser</h1>;
-// };
+export default function SignUser () {
+  return <h1>SignUser</h1>;
+};
 

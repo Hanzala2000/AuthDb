@@ -19,7 +19,7 @@ export default function AppRoute() {
           }
         />
         <Route path="/signInterface" element={<SignUser />} />
-        <Route path="loginterface" element={<LogUser />} />
+        <Route path="/logInterface" element={<LogUser />} />
       </Routes>
     </BrowserRouter>
   );

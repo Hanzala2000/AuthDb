@@ -1,3 +1,3 @@
-// export default function LogUser () {
-//   return <h1>LogUser</h1>;
-// };
+export default function LogUser () {
+  return <h1>LogUser</h1>;
+};

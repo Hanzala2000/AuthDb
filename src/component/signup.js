@@ -1,5 +1,8 @@
 import {useState} from 'react'
 import {auth,db} from "../config/firebase";
+
+
+
 export default function Sign() {
 const [data,setData] = useState({
   email:"",
@@ -12,7 +15,7 @@ let next = () =>{
   auth.createUserWithEmailAndPassword(data.email,data.password)
   .then((success)=>{
     console.log(success)
-
+    
   db.ref('/').child("Users").push({email:data.email,password:data.password})
   })
   .catch((error)=>{
