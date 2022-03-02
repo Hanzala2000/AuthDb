@@ -18,7 +18,6 @@ let next = () =>{
   .catch((error)=>{
     console.log(error)
   })
-  setData({email:"",password:""})
 }
   return (
     <div>
